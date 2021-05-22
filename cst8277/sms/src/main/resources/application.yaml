@@ -1,0 +1,28 @@
+## Server
+server:
+  port: 10000
+
+## MySql
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/sms?serverTimezone=UTC&useLegacyDatetimeCode=false
+    username: newuser
+    password: psswd
+
+
+# UMS service
+ums:
+  host: http://localhost
+  port: 8080
+  paths:
+    user: /login/verify
+
+# SMS service
+sms:
+  host: http://localhost
+  port: 10000
+  paths:
+    subscriber: /subscriptions
+
+

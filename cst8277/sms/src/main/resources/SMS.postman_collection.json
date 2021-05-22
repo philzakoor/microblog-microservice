@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "ad021da3-5cec-4399-9ea6-ef0de16fe6a4",
+		"name": "SMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get subscribers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:10000/subscriptions/70a64b54-43c3-4c18-bbec-64590ff7e0cc",
+					"host": [
+						"localhost"
+					],
+					"port": "10000",
+					"path": [
+						"subscriptions",
+						"70a64b54-43c3-4c18-bbec-64590ff7e0cc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "subscribe",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"subId\" : \"fefd3a87-bb47-485c-ba6e-33a1f7896bc8\",\r\n    \"proId\" : \"1cd89e11-602a-4186-afbf-e0149b59eb08\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:10000/subscriptions",
+					"host": [
+						"localhost"
+					],
+					"port": "10000",
+					"path": [
+						"subscriptions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all subscriptions - fail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:10000/subscriptions",
+					"host": [
+						"localhost"
+					],
+					"port": "10000",
+					"path": [
+						"subscriptions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all subscriptions - pass",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:10000/subscriptions",
+					"host": [
+						"localhost"
+					],
+					"port": "10000",
+					"path": [
+						"subscriptions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unsubscribe",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"subId\" : \"fefd3a87-bb47-485c-ba6e-33a1f7896bc8\",\r\n    \"proId\" : \"1cd89e11-602a-4186-afbf-e0149b59eb08\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:10000/subscriptions",
+					"host": [
+						"localhost"
+					],
+					"port": "10000",
+					"path": [
+						"subscriptions"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,18 @@
+## Server
+server:
+  port: 8080
+
+## MySQL
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ums?serverTimezone=UTC&useLegacyDatetimeCode=false
+    username: newuser
+    password: psswd
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: 71ac62e7ed8cac285e96
+            clientSecret: aa085c0f4e4fc318533772817641b894e81018e2
